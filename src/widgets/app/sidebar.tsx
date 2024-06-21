@@ -13,8 +13,8 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const appLinks = [
-  { name: "Listings", link: "/listings" },
-  { name: "Itineraries", link: "/iteneraries" },
+  { name: "Listings", link: "/" },
+  { name: "Itineraries", link: "/" },
   { name: "Ship settings", link: "/" },
 ];
 
@@ -91,8 +91,8 @@ const AppSideBar = () => {
               <Link key={name} href={link}>
                 <li
                   className={cn([
-                    "py-2 px-3 rounded w-full",
-                    pathname === link
+                    "py-2 px-3 rounded w-full text-foreground",
+                    name === 'Ship settings'
                       ? "bg-[#CDCDCD]"
                       : "hover:bg-[#CDCDCD]/20",
                   ])}
